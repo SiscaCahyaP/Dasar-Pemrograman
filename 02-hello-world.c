@@ -1,4 +1,4 @@
-/* Program Hello World */
+/* PROGRAM HELLO WORLD */
 
 /* Menampilkan teks Hello World! di konsol. */
 
