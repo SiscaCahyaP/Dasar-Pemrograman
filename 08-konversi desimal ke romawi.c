@@ -39,12 +39,16 @@ int main() {
 	puluhan = (n % 100) / 10;
 	satuan = n % 10;
 	
+	printf("\nAngka romawi dari %d adalah ", n);
+	
 	switch(ribuan){
 		case 1: strcpy(ribuanStr,"M"); break;
 		case 2: strcpy(ribuanStr,"MM"); break;
 		case 3: strcpy(ribuanStr,"MMM"); break;
 		default : strcpy(ribuanStr,"");
 		};
+	
+	printf("%s", ribuanStr);
 
 	switch(ratusan){
 		case 1: strcpy(ratusanStr,"C"); break;
@@ -58,6 +62,8 @@ int main() {
 		case 9: strcpy(ratusanStr,"CM"); break;
 		default : strcpy(ratusanStr,"");
 		};
+		
+	printf("%s", ratusanStr);
 	
 	switch(puluhan){
 		case 1: strcpy(puluhanStr,"X"); break;
@@ -71,6 +77,8 @@ int main() {
 		case 9: strcpy(puluhanStr,"XC"); break;
 		default: strcpy(puluhanStr,"");
 		};
+		
+	printf("%s", puluhanStr);
 	
 	switch(satuan){
 		case 1: strcpy(satuanStr,"I"); break;
@@ -85,7 +93,11 @@ int main() {
 		default: strcpy(satuanStr,""); break;
 		};
 		
-		printf("\nAngka romawi dari %d adalah %s%s%s%s\n", n, ribuanStr, ratusanStr, puluhanStr, satuanStr);
+	printf("%s", satuanStr);
+
+	/* ERROR */
+	/* KELUARAN TIDAK VALID KETIKA DIMASUKKAN NILAI 888 */
+	// printf("\nAngka romawi dari %d adalah %s_%s_%s_%s\n", n, ribuanStr, ratusanStr, puluhanStr, satuanStr);
 	
 	
 	return 0;
