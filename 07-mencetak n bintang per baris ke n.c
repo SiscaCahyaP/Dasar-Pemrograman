@@ -1,4 +1,4 @@
-/* PROGRAM MencetakBintang */
+/* PROGRAM MencetakNBintangPerBarisKeN */
 
 /* Mencetak bintang dari baris satu sampai baris ke n.
  * Setiap baris ke n terdapat n bintang */
