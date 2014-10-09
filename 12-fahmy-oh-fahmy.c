@@ -19,95 +19,69 @@
 
 int main(int argc, char **argv)
 {
-	int n;				// jumlah masukan
-	int jumlah;			// jumlah total
-	int max, min;
-	int input, input1;	// input 	: masukan
-						// input1 	: variabel untuk menyimpan masukan
-						//			  pertama
+  int n;                // jumlah masukan
+  int jumlah;           // jumlah total
+  int max, min;
+  int input;            // input   : masukan
+                        // input1  : variabel untuk menyimpan masukan
+                        //           pertama
 	
-	/* inisialisasi awal */
-	n = 1;
-	jumlah = 0;
+  /* inisialisasi awal */
+  jumlah = 0;
 	
-	while (n <= 7)
-	{
-		scanf("%d", &input);
-		
-		/* menentukan nilai terbesar */
-		if (n == 1)
-		{
-			input1 = input;
-		}
-		else if (n == 2)
-		{
-			if (input1 > input)
-			{
-				max = input1;
-			} else {
-				max = input;
-			}
-		}
-		else if (n > 2)
-		{
-			if (input > max)
-			{
-				max = input;
-			}
-		}
-		
-		/* menentukan nilai kerkecil */
-		if (n == 1)
-		{
-			input1 = input;
-		}
-		else if (n == 2)
-		{
-			if (input1 < input)
-			{
-				min = input1;
-			} else {
-				min = input;
-			}
-		}
-		else if (n > 2)
-		{
-			if (input < min)
-			{
-				min = input;
-			}
-		}
-		
-		jumlah = jumlah + input;
-		
-		n = n + 1;
-	}
-	
-	
-	if (max % 2 == 0)
-	{
-		printf("Nilai terbesar adalah genap : %d\n", max); 	// max genap
-	} else {
-		printf("Nilai terbesar adalah ganjil : %d\n", max);	// max ganjil
-	}
-	
-	printf("Dengan nilai satuan : %d\n", max % 10);
-	
-	if (min % 2 == 0)
-	{
-		printf("Nilai terkecil adalah genap : %d\n", min);	// max genap
-	} else {
-		printf("Nilai terkecil adalah ganjil : %d\n", min);	// min ganjil
-	}
-	
-	printf("Dengan nilai satuan : %d\n", min % 10);
-	
-	printf("Jumlah ketujuh bilangan tersebut adalah : %d\n", jumlah);
-	
-	printf("Rata-rata ketujuh bilangan tersebut adalah : %.2f\n",
-	(float)jumlah / 7);
-	
-	return 0;
-}
+  for (n = 1; n <= 7; n++)
+  {
+    scanf("%d", &input);
 
-// test
+    /* menentukan nilai terbesar */
+    if (n == 1)
+      {
+        max = input;
+      } else {
+        if (input > max)
+        {
+          max = input;
+        }
+      }
+		
+    /* menentukan nilai kerkecil */
+    if (n == 1)
+    {
+      min = input;
+    } else {
+      if (input < min)
+    {
+      min = input;
+    }
+      }
+
+    jumlah = jumlah + input;
+
+  }
+
+
+  if (max % 2 == 0)
+  {
+    printf("Nilai terbesar adalah genap : %d\n", max); 	// max genap
+  } else {
+    printf("Nilai terbesar adalah ganjil : %d\n", max);	// max ganjil
+  }
+
+  printf("Dengan nilai satuan : %d\n", max % 10);
+	
+  if (min % 2 == 0)
+  {
+    printf("Nilai terkecil adalah genap : %d\n", min);	// max genap
+  } else {
+    printf("Nilai terkecil adalah ganjil : %d\n", min);	// min ganjil
+  }
+	
+  printf("Dengan nilai satuan : %d\n", min % 10);
+
+  printf("Jumlah ketujuh bilangan tersebut adalah : %d\n", jumlah);
+	
+  printf("Rata-rata ketujuh bilangan tersebut adalah : %.2f\n",
+  (float)jumlah / 7);
+	
+  return 0;
+}
