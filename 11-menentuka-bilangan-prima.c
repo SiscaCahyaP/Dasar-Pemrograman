@@ -5,29 +5,29 @@
 
 int main(int argc, char **argv)
 {
-	int n, i, temu, j;
+  int n, i, temu, j;
+
+  scanf("%d", &n);
 	
-	scanf("%d", &n);
+  for(i = 2;i <= n; i++)
+  {
+    temu = 0;
+
+    for(j = 2; j < i; j++)
+    {
+      if(i % j == 0)
+      {
+        temu = 1;
+        break;
+      }
+    }
+		
+    if(temu == 0)
+    {
+      printf("%d ", i);
+    }
+    
+  }
 	
-	for(i = 2;i <= n; i++)
-	{
-		temu = 0;
-		
-		for(j = 2; j < i; j++)
-		{
-			if(i % j == 0)
-			{
-				temu = 1;
-				break;
-			}
-		}
-		
-		if(temu == 0)
-		{
-			printf("%d ", i);
-		}
-		
-	}
-	
-	return 0;
+  return 0;
 }
