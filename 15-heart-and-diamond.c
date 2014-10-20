@@ -125,18 +125,24 @@ void cinta2(int n, int jenis)
 
 int main(int argc, char **argv)
 {
-  int n, jenis;
-  scanf("%d %d", &jenis, &n);
-  if (jenis == 4)
-  {
-    wajik1(n, jenis);
-    wajik2(n, jenis);
-  }
-  else if (jenis == 3)
-  {
-    cinta1(n, jenis); 
-    cinta2(n, jenis);
-  }
+  int n, jenis, x, i;
   
+  scanf("%d", &x);
+  
+  for (i = 1; i <= x; i++)
+  {
+    scanf("%d %d", &jenis, &n);
+    if (jenis == 4)
+    {
+      wajik1(n, jenis);
+      wajik2(n, jenis);
+    }
+    else if (jenis == 3)
+    {
+      cinta1(n, jenis);
+      cinta2(n, jenis);
+    }
+  }
+
   return 0;
 }
